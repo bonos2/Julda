@@ -3,8 +3,6 @@
         width: 1080px;
         height: 1920px;
         border:3px solid #616161;
-        margin-left: 35%;
-        margin-top: 5%;
         padding-top:20px;
         text-align:center;
     }
@@ -46,12 +44,15 @@
     input{
         width:700px;
         height:200px;
+        font-size:70px;
     }
     #log_button {
         width: 200px;
         height: 410px;
         float: left;
-        background-color: #66CCFF;
+        background-image:url("Login_Button.png");
+        background-repeat:no-repeat;
+        background-size:200px 410px;
         font-family:"Franklin Gothic Medium";
         color:#ffffff;
         text-align:center;
