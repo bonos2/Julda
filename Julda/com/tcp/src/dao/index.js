@@ -7,21 +7,16 @@ var client = mysql.createConnection({
 	database : 'mydb'
 });
 
-exports.login = function (request, response) {
-	var req_mem_id = request.param('id');
-	var req_mem_pw = request.param('pw');
-	console.log(req_mem_id);
-	console.log(req_mem_pw);
-
-	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [req_mem_id, req_mem_pw], function(error, result, fields) {
+exports.checkLogin = function (id, pw, callback) {
+	var check = 'no';
+	
+	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [id, pw], function(error, result, fields) {
 		if(result.length == 0){
-			response.json({
-				RESULT : "NO"
-			});
+			check = 'no';
+			callback(check);	
 		} else {
-			response.json({
-				RESULT : "YES"
-			});
+			check = 'yes';
+			callback(check);
 		}
 	});
 };
