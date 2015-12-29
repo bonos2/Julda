@@ -1,0 +1,64 @@
+
+#section {
+    width: 1080px;
+    height: 1920px;
+    background-color: #ffffff;
+    border:3px solid #616161;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding-top:20px;
+    text-align:center;
+}
+
+
+
+#content{
+    width:900px;
+    height:1400px;
+    margin-top:150px;
+    margin-bottom:25px;
+    margin-left:90px;
+    background-color:beige;
+}
+
+#sub{
+    width:700px;
+    height:200px;
+    margin-left:50px;
+    text-align:left;
+    font-size:50px;
+    line-height:300px;
+    border-bottom:1px solid #000000;
+    font-family:휴먼편지체;
+}
+
+.con{
+    width:800px;
+    height:150px;
+    margin-left:50px;
+    border-bottom:1px solid #000000;
+}
+
+#button{
+    width:900px;
+    height:200px;
+    margin-left:90px;
+    margin-top:50px;
+    background-color:#ffffff;
+}
+
+#button1{
+    width:400px;
+    height:200px;
+    float:left;
+    margin-left:0px;
+    background-color:#29b6f6;
+}
+
+#button2{
+    width:400px;
+    height:200px;
+    float:left;
+    margin-left:100px;
+    background-color:#29b6f6;
+}

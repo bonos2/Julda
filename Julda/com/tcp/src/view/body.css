@@ -1,0 +1,56 @@
+#section {
+    width: 1080px;
+    height: 1920px;
+    background-color: #ffffff;
+    margin-left: 35%;
+    text-align:center;
+    border:3px solid #616161;
+}
+
+
+#header{
+    width:1080px;
+    height:450px;
+    background-color:#ffffff;
+}
+
+#bubble{
+    width:650px;
+    height:450px;
+    background-image : url(MAIN_3_textballoon.png);
+    background-repeat:no-repeat;
+}
+
+.font{
+    width:200px;
+    height:30px;
+    margin-left:20px;
+    font-size:50px;
+}
+
+#height{
+    width:500px;
+    height:200px;
+    text-align:left;
+    line-height: 60px;
+    font-family:한컴돋움;
+    color:#212121;
+}
+
+#weight{
+    width:500px;
+    height:200px;
+    text-align:left;
+    line-height: 50px;
+    font-family:한컴돋움;
+    color:#212121;
+}
+
+#body{
+    width:900px;
+    height:1600px;
+    margin-left:180px;
+    margin-top:-110px;
+    background-image : url(MAIN_3_human.png);
+    background-repeat:no-repeat;
+}
