@@ -7,9 +7,11 @@ var client = mysql.createConnection({
 	database : 'mydb'
 });
 
+/* check login */
 exports.checkLogin = function (id, pw, callback) {
 	var check = 'no';
 	
+	/* find id and pw in database */
 	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [id, pw], function(error, result, fields) {
 		if(result.length == 0){
 			check = 'no';
@@ -19,4 +21,32 @@ exports.checkLogin = function (id, pw, callback) {
 			callback(check);
 		}
 	});
+};
+
+/* create user */
+exports.createUser = function (UserModel) {
+};
+
+/* get schedule */
+exports.getSchedule = function (userIndex) {
+};
+
+/* add schedule */
+exports.addSchedule = function (ScheduleModel) {
+};
+
+/* delete schedule */
+exports.deleteSchedule = function (schedulIndex, userIndex) {
+};
+
+/* get mission */
+exports.getMission = function (userIndex) {
+};
+
+/* get bodymodel */
+exports.getBodyModel = function (userIndex) {
+};
+
+/*get summary */
+exports.getSummary = function (userIndex) {
 };
