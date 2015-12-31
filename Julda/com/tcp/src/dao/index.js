@@ -1,21 +1,22 @@
 var mysql = require('mysql');
 var client = mysql.createConnection({
-	host : 'arirang.cx7s5qbzipaw.ap-northeast-1.rds.amazonaws.com',
+	host : '127.0.0.1',
 	port : 3306,
-	user : 'ari',
+	user : 'root',
 	password : 'dkflfkd13gh',
 	database : 'mydb'
 });
 
 /* check login */
-exports.checkLogin = function (id, pw, callback) {
+exports.checkLogin = function(id, pw, callback) {
 	var check = 'no';
-	
+
 	/* find id and pw in database */
-	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [id, pw], function(error, result, fields) {
-		if(result.length == 0){
+	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [
+			id, pw ], function(error, result, fields) {
+		if (result.length === 0) {
 			check = 'no';
-			callback(check);	
+			callback(check);
 		} else {
 			check = 'yes';
 			callback(check);
@@ -24,29 +25,29 @@ exports.checkLogin = function (id, pw, callback) {
 };
 
 /* create user */
-exports.createUser = function (UserModel) {
+exports.createUser = function(UserModel) {
 };
 
 /* get schedule */
-exports.getSchedule = function (userIndex) {
+exports.getSchedule = function(userIndex) {
 };
 
 /* add schedule */
-exports.addSchedule = function (ScheduleModel) {
+exports.addSchedule = function(ScheduleModel) {
 };
 
 /* delete schedule */
-exports.deleteSchedule = function (schedulIndex, userIndex) {
+exports.deleteSchedule = function(schedulIndex, userIndex) {
 };
 
 /* get mission */
-exports.getMission = function (userIndex) {
+exports.getMission = function(userIndex) {
 };
 
 /* get bodymodel */
-exports.getBodyModel = function (userIndex) {
+exports.getBodyModel = function(userIndex) {
 };
 
 /*get summary */
-exports.getSummary = function (userIndex) {
+exports.getSummary = function(userIndex) {
 };

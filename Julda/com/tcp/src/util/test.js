@@ -1,3 +1,3 @@
-/*
-	Test
-		*/
+/**
+ * http://usejsdoc.org/
+ */
