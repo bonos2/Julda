@@ -5,5 +5,5 @@ exports.member = function(id, pw, name, callback) {
 	member.pw = pw;
 	member.name = name;
 
-	return member;
+	callback(member);
 };

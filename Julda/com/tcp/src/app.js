@@ -8,8 +8,9 @@ var member;
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'html');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
@@ -29,10 +30,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-	res.sendfile('./views/index.html');
+	res.render('index');
 });
 
-app.get('/daily', function(req, res) {
+app.get('/user', function(req, res) {
 	res.sendfile('./views/daily.html');
 });
 
@@ -41,11 +42,11 @@ app.post('/login', function(req, res) {
 	var req_mem_pw = req.body.pw;
 
 	loginController.checkLogin(req_mem_id, req_mem_pw, function(result) {
-		if (result === 'yes') {
-			res.redirect('http://127.0.0.1:3000/daily');
-		}
+			res.redirect('http://127.0.0.1:3000/user');
 	});
 });
+
+app.get('/user/profile', loginController.getUserProfile);
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
