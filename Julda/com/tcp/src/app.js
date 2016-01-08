@@ -14,6 +14,10 @@ app.set('view engine', 'html');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
+app.use(express.cookieParser());
+app.use(express.session({
+	secret : 'secret key'
+}));
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'views')));
@@ -34,15 +38,20 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/user', function(req, res) {
-	res.sendfile('./views/daily.html');
+	res.render('daily');
 });
 
 app.post('/login', function(req, res) {
 	var req_mem_id = req.body.id;
 	var req_mem_pw = req.body.pw;
-
+	
 	loginController.checkLogin(req_mem_id, req_mem_pw, function(result) {
-			res.redirect('http://127.0.0.1:3000/user');
+		if (result === 'yes') {
+			req.session.regenerate(function(err) {
+				req.session.myid = req_mem_id;
+				res.redirect('/user');
+			});
+		}
 	});
 });
 

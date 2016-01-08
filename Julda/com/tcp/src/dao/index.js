@@ -18,14 +18,15 @@ exports.checkLogin = function(id, pw, callback) {
 
 /* get user profile */
 exports.getUserProfile = function(id, callback) {
-	client.query('SELECT * FROM mydb.Members where mem_id=?', [id], function(error, result, fields) {
+	client.query('SELECT * FROM mydb.Members where mem_id=?', [ id ], function(
+			error, result, fields) {
 		callback(result);
 	});
 };
 
 /* create user */
 exports.createUser = function(UserModel) {
-	
+
 };
 
 /* get schedule */
@@ -48,6 +49,6 @@ exports.getMission = function(userIndex) {
 exports.getBodyModel = function(userIndex) {
 };
 
-/*get summary */
+/* get summary */
 exports.getSummary = function(userIndex) {
 };
