@@ -10,16 +10,14 @@ var client = mysql.createConnection({
 /* check login */
 exports.checkLogin = function(id, pw, callback) {
 	/* find id and pw in database */
-	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [
-			id, pw ], function(error, result, fields) {
+	client.query('SELECT * FROM mydb.Members where mem_id=? AND mem_pw=?', [ id, pw ], function(error, result, fields) {
 		callback(result);
 	});
 };
 
 /* get user profile */
 exports.getUserProfile = function(id, callback) {
-	client.query('SELECT * FROM mydb.Members where mem_id=?', [ id ], function(
-			error, result, fields) {
+	client.query('SELECT * FROM mydb.Members where mem_id=?', [ id ], function(error, result, fields) {
 		callback(result);
 	});
 };

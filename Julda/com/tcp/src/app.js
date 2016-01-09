@@ -34,28 +34,16 @@ app.get('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-	res.render('index');
+	res.render('index', {msg:req.session.msg});
 });
 
 app.get('/user', function(req, res) {
 	res.render('daily');
 });
 
-app.post('/login', function(req, res) {
-	var req_mem_id = req.body.id;
-	var req_mem_pw = req.body.pw;
-	
-	loginController.checkLogin(req_mem_id, req_mem_pw, function(result) {
-		if (result === 'yes') {
-			req.session.regenerate(function(err) {
-				req.session.myid = req_mem_id;
-				res.redirect('/user');
-			});
-		}
-	});
-});
-
 app.get('/user/profile', loginController.getUserProfile);
+
+app.post('/login', loginController.checkLogin);
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
