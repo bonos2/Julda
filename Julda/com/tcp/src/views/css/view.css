@@ -21,7 +21,7 @@
         margin:0vw 0vw 0vw 5vw;
         padding-top:3%;
     }
-@media screen and (max-width:500px){
+
 
         .button{
             width:40%;
@@ -52,14 +52,3 @@
             border-bottom:1px solid #616161 !important;
             border:0px;
         }
-}
-    @media screen and (min-width:500px){
-        .button{
-            width:40%;
-            height:15%;
-            margin-top:5%;
-            margin-left:7vw;
-            border:0px;
-        }
-            
-    }
