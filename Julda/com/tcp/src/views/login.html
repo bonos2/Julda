@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/> 
+    <link rel="stylesheet" type="text/css" href="./css/view.css">
+</head>
+<style>
+   @media screen and (max-width:500px){
+        .id_pw{
+            height:30%;
+            float:left;
+            margin-top:5%;
+        }
+        
+        .id_pw input{
+            height:50%;
+        }
+    }
+    @media screen and (min-width:500px){
+        img{
+            display:none;
+        }
+        .id_pw{
+            margin-top:10%;
+            height:50%;
+            float:left;
+        }
+        .id_pw input{
+            height:50%;
+        }
+    }
+</style>
+    
+<body>
+    <div>
+        <img src="./img/Exercise_armbutton.png" class="view">
+    </div>
+    <div class="view">
+        <form action="" name="login" method="post" style="margin:0%">
+        <div>
+            <div class="id_pw" style="width:75%;" >
+                <input type="text" style="width:100%" name="id">
+                <input type="text" style="width:100%" name="pw">
+            </div>
+        </div>
+            <input type="submit" class="id_pw" style="width:25%; background-image:url('./img/Login_Button.png'); background-size:100% 100%; border:0px;" value="">
+        </form>
+            <div class="box">
+                <input type="button" class="button pic" style="background-image:url('./img/Join_Button.png'); margin-left:2%;">
+                <input type="button" class="button pic" style="background-image:url('./img/PW_Button.png');">
+            </div>
+    </div>
+</body>
+    
+</html>

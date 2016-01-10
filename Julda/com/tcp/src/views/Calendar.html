@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/view.css">
+    <script type="text/javascript" src="./js/Calendar.js"></script>
+    <style>
+        #month{
+            width:100%;
+            height:80%;
+            font-size:1.5em;
+            text-align:center;
+        }
+        #year{
+            width:100%;
+            height:20%;
+            text-align:center;
+        }
+        #calender_table{
+            table-layout:fixed;
+            width:100%;
+            height:70%;
+            text-align:center;
+            border-spacing:inherit;
+        }
+        #up{
+            background-color:#66CCFF;
+            height:5%;
+        }
+        td{
+            border:1px solid #000000;
+        }
+        .num{
+            width:40%;
+            height:40%;
+            background-color:azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="month"></div>
+        <div id="year"  class="font"></div>
+    </div>
+    <div id="day">
+    </div>
+</body>
