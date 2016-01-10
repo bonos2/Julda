@@ -1,61 +1,64 @@
-<html>
+<html ng-app="myApp">
 <head>
-    <meta charset="UTF-8">
-    <title>Main_2</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="css/view.css">
-    <style>
+<meta charset="UTF-8">
+<title>Main_2</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/view.css">
+<style>
+.sub_list {
+	height: 100%;
+	float: left;
+}
 
-    .sub_list{
-        height:100%;
-        float:left;
-    }
-    #parcent{
-        width:90%;
-        height:10%;
-        margin-left:5%;
-        background:#ffffff;
-        height:15%;
-        border-radius:30px;
-        margin-top:10vh;
-    }
-
-    </style>
+#parcent {
+	width: 90%;
+	height: 10%;
+	margin-left: 5%;
+	background: #ffffff;
+	height: 15%;
+	border-radius: 30px;
+	margin-top: 10vh;
+}
+</style>
 </head>
 <body>
 
-    <div class="list" style="height:13%">
-        <p style="margin-left:8%; font-size:80%">2016. 01. 01</p>
-    </div>
-    <div class="list table" style="background:#66ccff; height:13%;">
-            <div class="table" id="parcent"></div>
-    </div>
-    <div class="list">
-        <div class="table sub_list" style="width:85%;"></div>
-        <div class="table sub_list" style="width:13.5%;"></div>
-    </div>
-        <div class="list">
-        <div class="table sub_list" style="width:85%;"></div>
-        <div class="table sub_list" style="width:13.5%;"></div>
-    </div>
-        <div class="list">
-        <div class="table sub_list" style="width:85%;"></div>
-        <div class="table sub_list" style="width:13.5%;"></div>
-    </div>
-        <div class="list">
-       <div class="table sub_list" style="width:85%;"></div>
-        <div class="table sub_list" style="width:13.5%;"></div>
-    </div>
-        <div class="list" style="margin-bottom:5%;">
-        <div class="table sub_list" style="width:85%;"></div>
-        <div class="table sub_list" style="width:13.5%;"></div>
-    </div>
-    <div class="box">
-        <input type="button" class="button pic" style="background-image:url('./img/MAIN_2_plusbutton.png'); width:30%;">
-        <input type="button" class="button pic" style="background-image:url('./img/MAIN_2_weightbutton.png'); width:30%; margin-left:33%;">
-    </div>
- 
+	<div class="list" style="height: 13%">
+		<p style="margin-left: 8%; font-size: 80%">2016. 01. 01</p>
+	</div>
+	<div class="list table" style="background: #66ccff; height: 13%;">
+		<div class="table" id="parcent"></div>
+	</div>
+	<div class="list" onclick="location.href='detail.html'" ng-controller="myController">
+		<div class="table sub_list" style="width: 85%;">{{user}}</div>
+		<div class="table sub_list" style="width: 13.5%;"></div>
+	</div>
+	<div class="list">
+		<div class="table sub_list" style="width: 85%;"></div>
+		<div class="table sub_list" style="width: 13.5%;"></div>
+	</div>
+	<div class="list">
+		<div class="table sub_list" style="width: 85%;"></div>
+		<div class="table sub_list" style="width: 13.5%;"></div>
+	</div>
+	<div class="list">
+		<div class="table sub_list" style="width: 85%;"></div>
+		<div class="table sub_list" style="width: 13.5%;"></div>
+	</div>
+	<div class="list" style="margin-bottom: 5%;">
+		<div class="table sub_list" style="width: 85%;"></div>
+		<div class="table sub_list" style="width: 13.5%;"></div>
+	</div>
+	<div class="box">
+		<input type="button" class="button pic"
+			style="background-image: url('./img/MAIN_2_plusbutton.png'); width: 30%;">
+		<input type="button" class="button pic"
+			style="background-image: url('./img/MAIN_2_weightbutton.png'); width: 30%; margin-left: 33%;">
+	</div>
 
+	<script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
+	<script src="my_app.js"></script>
 </body>
 
 </html>

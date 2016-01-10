@@ -34,11 +34,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-	res.render('index', {msg:req.session.msg});
+	res.render('login', {msg:req.session.msg});
 });
 
 app.get('/user', function(req, res) {
-	res.render('daily');
+	res.render('main_2');
 });
 
 app.get('/user/profile', loginController.getUserProfile);
